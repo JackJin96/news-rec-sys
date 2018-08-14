@@ -3,6 +3,7 @@ import './App.css';
 
 import React from 'react';
 import logo from './newslogo.png';
+import NewsPanel from '../NewsPanel/NewsPanel';
 
 class App extends React.Component{
     render() {
@@ -10,7 +11,7 @@ class App extends React.Component{
             <div>
                 <img className='logo' src={logo} alt='logo' />
                 <div className='container'>
-                    // Leave blank for now.
+                    <NewsPanel />
                 </div>
             </div>
         );
