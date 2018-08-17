@@ -1,14 +1,14 @@
-var express = require('express');
-var path = require('path');
+const express = require('express');
+const path = require('path');
 
-var index = require('./routes/index');
+const index = require('./routes/index');
 
-var app = express();
+const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '../client/build'));
 app.set('view engine', 'jade');
-app.use('/static', express.static(path.join(__dirname, '../client/build/static/')));
+app.use('/static', express.static(path.join(__dirname, '../client/build/static')));
 
 app.use('/', index);
 
