@@ -11,6 +11,18 @@ class NewsPanel extends React.Component {
 
     componentDidMount() {
         this.loadMoreNews();
+        window.addEventListener('scroll', () => this.handleScroll());
+    }
+
+    handleScroll () {
+        // scrollY is the height of the unseen page (page - window)
+        let scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        // window.innerheight is the height of the current window
+        // document.body.height is the height of the whole page
+        if((window.innerHeight + scrollY) >= document.body.offsetHeight - 50) {
+            console.log('load more news');
+            this.loadMoreNews();
+        }
     }
 
     loadMoreNews() {

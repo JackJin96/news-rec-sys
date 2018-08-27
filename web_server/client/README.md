@@ -12,3 +12,8 @@ npm start
 npm install --save materialize-css
 ```
 
+### Lodash
+```
+npm install lodash
+```
+
