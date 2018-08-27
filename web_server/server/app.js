@@ -14,7 +14,7 @@ app.use('/static', express.static(path.join(__dirname, '../client/build/static')
 app.all('*', (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next()
+  next();
 });
 
 app.use('/', index);
