@@ -2,6 +2,7 @@ import './NewsPanel.css'
 
 import NewsCard from '../NewsCard/NewsCard';
 import React from 'react';
+import _ from 'lodash';
 
 class NewsPanel extends React.Component {
     constructor() {
@@ -11,10 +12,12 @@ class NewsPanel extends React.Component {
 
     componentDidMount() {
         this.loadMoreNews();
+        this.loadMoreNews = _.debounce(this.loadMoreNews, 500);
         window.addEventListener('scroll', () => this.handleScroll());
     }
 
     handleScroll () {
+        console.log('actually triggered loading more news!');
         // scrollY is the height of the unseen page (page - window)
         let scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
         // window.innerheight is the height of the current window
@@ -41,7 +44,7 @@ class NewsPanel extends React.Component {
     renderNews() {
         const news_list = this.state.news.map(each_news => {
             return (
-              <a className='list-group-item' key={each_news.digest} href="#">
+              <a className='list-group-item' href="#">
                 <NewsCard news={each_news} />
               </a>
             );
