@@ -17,3 +17,7 @@ npm install --save materialize-css
 npm install lodash
 ```
 
+## Development Notes:
+If using Bootstrap, need to have JQuery.
+JQuery is not well supported in React, so we need to inject it in html using script tag.
+Go to code.jquery.com, under JQuery 3.x, choose `slim minified` and copy the script code to `App.js`.

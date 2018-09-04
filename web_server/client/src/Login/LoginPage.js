@@ -7,7 +7,11 @@ class LoginPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            errors: {},
+            errors: {
+                summary: 'Summary Error!',
+                email: 'Email Error!',
+                password: 'Password Error!'
+            },
             user: {
                 email: '',
                 password: ''
@@ -15,7 +19,7 @@ class LoginPage extends React.Component {
         };
     }
 
-    processFrom(event) {
+    processForm(event) {
         //the default dehavior is to set a http post request
         event.preventDefault();
 

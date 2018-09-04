@@ -14,7 +14,7 @@ const LoginForm = ({    //props
     <div className="container">
 	    <div className="card-panel login-panel">
 	      <form className="col s12" action="/" onSubmit={onSubmit}>
-	        <h4 className="center-align">Login</h4>
+	        <h4 className="center-align login-text">Login</h4>
 	        {errors.summary && <div className="row"><p className="error-message">{errors.summary}</p></div>}
 	        <div className="row">
 	          <div className="input-field col s12">
