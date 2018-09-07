@@ -1,0 +1,13 @@
+.signup-panel {
+    margin: auto;
+    width: 40%;
+  }
+
+.signup-text {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.error-message {
+    padding-left: 20px;
+    color: red;
+}
