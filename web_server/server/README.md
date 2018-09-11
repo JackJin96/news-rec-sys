@@ -8,3 +8,8 @@ cd server
 npm install
 ```
 
+### Jayson
+```
+npm install --save jayson
+```
+
