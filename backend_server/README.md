@@ -1,4 +1,5 @@
 ### jsonrpclib-pelix to support python3
+Not recommended to install this way. Recommend to use `requirements.txt`
 ```
 pip3 install jsonrpclib-pelix
 ```
