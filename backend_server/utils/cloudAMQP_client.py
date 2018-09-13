@@ -24,7 +24,7 @@ class CloudAMQPClient:
         if method_frame:
             print("[x] Received message from %s:%s" % (self.queue_name, body))
             self.channel.basic_ack(method_frame.delivery_tag)
-            return json.loads(body)
+            return json.loads(body.decode('utf-8'))
         else:
             print("No message returned.")
             return None
