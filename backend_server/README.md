@@ -1,3 +1,8 @@
+## Install all the requirements
+```
+pip3 install -r requirements.txt
+```
+
 ### jsonrpclib-pelix to support python3
 Not recommended to install this way. Recommend to use `requirements.txt`
 ```
@@ -31,4 +36,10 @@ mongoimport --db db_name --collection collection_name --file file_name.json
 Not recommended to install this way. Recommend to use `requirements.txt`
 ```
 pip3 install pymongo
+```
+
+### pika
+pure python implementation of AMQP 0-9-1 protocol, recommend use `requirements.txt`
+```
+pip install pika
 ```
