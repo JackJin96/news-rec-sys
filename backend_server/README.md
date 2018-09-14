@@ -43,3 +43,14 @@ pure python implementation of AMQP 0-9-1 protocol, recommend use `requirements.t
 ```
 pip install pika
 ```
+
+### Pylint
+Install Pylint under python3
+```
+pip3 install pylint
+```
+
+Run Pylint using python3
+```
+python3 -m pylint file_name.py
+```
