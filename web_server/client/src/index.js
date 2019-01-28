@@ -5,5 +5,5 @@ import registerServiceWorker from './registerServiceWorker';
 import LoginPage from './Login/LoginPage';
 import SignUpPage from  './SignUp/SignUpPage';
 
-ReactDOM.render(<SignUpPage />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
